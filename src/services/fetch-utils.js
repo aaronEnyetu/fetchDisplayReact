@@ -7,3 +7,12 @@ export async function getPlants() {
 
   return response.body;
 }
+
+export async function getFoods() {
+  const response = await client
+    .from('foods')
+    .select('*');
+
+
+  return response.body;
+}

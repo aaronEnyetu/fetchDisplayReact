@@ -11,7 +11,7 @@ function App() {
   //Data from supabase lives in state
 
   const [plants, setPlants] = useState([]);
-  const [foods, setFoods] = useEffect([]);
+  const [foods, setFoods] = useState([]);
 
 
   async function fetchPlantsData() {
@@ -27,6 +27,7 @@ function App() {
   useEffect(() => {
     async function fetchFoodsData() {
       const data = await getFoods();
+      setFoods(data);
     }
 
     fetchFoodsData();
