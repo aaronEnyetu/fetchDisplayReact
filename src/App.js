@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
-import { getPlants } from './services/fetch-utils';
+import { getPlants, getFoods } from './services/fetch-utils';
 import './App.css';
 // import your arrays here
 import PlantsList from './PlantsList';
+import FoodsLst from './FoodsList';
 
 
 
@@ -10,6 +11,7 @@ function App() {
   //Data from supabase lives in state
 
   const [plants, setPlants] = useState([]);
+  const [foods, setFoods] = useEffect([]);
 
 
   async function fetchPlantsData() {
@@ -22,6 +24,14 @@ function App() {
     fetchPlantsData();
   }, []);
 
+  useEffect(() => {
+    async function fetchFoodsData() {
+      const data = await getFoods();
+    }
+
+    fetchFoodsData();
+  }, []);
+
 
 
   
@@ -29,6 +39,7 @@ function App() {
     <div className="App">
         Render all your lists here. Pass the arrays as props.
       <PlantsList plants={plants}/>
+      <FoodsLst foods={foods} />
     </div>
   );
 }
