@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getPlants } from './service/fetch-utils';
+import { getPlants } from './services/fetch-utils';
 import './App.css';
 // import your arrays here
 import PlantsList from './PlantsList';

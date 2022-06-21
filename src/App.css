@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.plants-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.plant {
+  color: black;
+  padding: 20px;
+  margin: 10px;
+}
