@@ -16,3 +16,12 @@ export async function getFoods() {
 
   return response.body;
 }
+
+export async function getMovies() {
+  const response = await client
+    .from('movies')
+    .select('*');
+
+
+  return response.body;
+}

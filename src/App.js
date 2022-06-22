@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
-import { getPlants, getFoods } from './services/fetch-utils';
+import { getPlants, getFoods, getMovies, getFarmers } from './services/fetch-utils';
 import './App.css';
 // import your arrays here
 import PlantsList from './PlantsList';
-import FoodsLst from './FoodsList';
+import FoodsList from './FoodsList';
+import MovieList from './MovieList';
+import FarmersList from './FarmersList';
 
 
 
@@ -12,6 +14,8 @@ function App() {
 
   const [plants, setPlants] = useState([]);
   const [foods, setFoods] = useState([]);
+  const [movies, setMovies] = useState([]);
+  const [farmers, setFarmers] = useState([]);
 
 
   async function fetchPlantsData() {
@@ -33,6 +37,23 @@ function App() {
     fetchFoodsData();
   }, []);
 
+  useEffect(() => {
+    async function fetchFruitsData() {
+      const data = await getMovies();
+      setMovies(data);
+    }
+
+    fetchFruitsData();
+  }, []);
+
+  useEffect(() => {
+    async function fetchFarmersData() {
+      const data = await getFarmers();
+      setFarmers(data);
+    }
+    fetchFarmersData();
+  }, []);
+
 
 
   
@@ -40,7 +61,9 @@ function App() {
     <div className="App">
         Render all your lists here. Pass the arrays as props.
       <PlantsList plants={plants}/>
-      <FoodsLst foods={foods} />
+      <FoodsList foods={foods} />
+      <MovieList movies={movies} />
+      <FarmersList farmers={farmers} />
     </div>
   );
 }

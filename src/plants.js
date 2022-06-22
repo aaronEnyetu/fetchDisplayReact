@@ -3,11 +3,11 @@ import React from 'react';
 export default function Plants({ name, order, family, genus, species, color }) {
   return (
     <div className="plant" style={{ background: color }}>
-      <p>{name}</p>
-      <p>{order}</p>
-      <p>{family}</p>
-      <p>{genus}</p>
-      <p>{species}</p>
+      <p>Plant Name:{name}</p>
+      <p>Plant Order:{order}</p>
+      <p>Plant Family:{family}</p>
+      <p>Plant Genus:{genus}</p>
+      <p>Plant Species:{species}</p>
     </div>
   );
 
