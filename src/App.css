@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+.plants-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.plant {
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.95);
+  padding: 10px;
+  margin: 10px;
+}
+
+.food {
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.95);
+  padding: 10px;
+  margin: 10px;
+}
+
+.foods-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie { 
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.95);
+  padding: 10px;
+  margin: 10px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.farmer { 
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px 3px rgba(0,0,0,0.95);
+  padding: 10px;
+  margin: 10px;
+}
+
+.farmers-list {
+  display: flex;
+  flex-wrap: wrap;
+}
