@@ -38,12 +38,12 @@ function App() {
   }, []);
 
   useEffect(() => {
-    async function fetchFruitsData() {
+    async function fetchMoviesData() {
       const data = await getMovies();
       setMovies(data);
     }
 
-    fetchFruitsData();
+    fetchMoviesData();
   }, []);
 
   useEffect(() => {
@@ -59,7 +59,7 @@ function App() {
   
   return (
     <div className="App">
-        Render all your lists here. Pass the arrays as props.
+        Render and show all your lists here. Pass the arrays as props.
       <PlantsList plants={plants}/>
       <FoodsList foods={foods} />
       <MovieList movies={movies} />

@@ -25,3 +25,11 @@ export async function getMovies() {
 
   return response.body;
 }
+
+export async function getFarmers() {
+  const response = await client 
+    .from('farmers')
+    .select('*');
+
+  return response.body;
+}
