@@ -12,3 +12,4 @@ export default function Plants({ name, order, family, genus, species, color }) {
   );
 
 }
+//testing plants 
